@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grace Taiken · Fashion designer &amp; dressmaker in Pretoria West</title>
+<meta name="description" content="Made-to-measure wedding, traditional, heritage, formal and dinner wear for men, women and children, designed and sewn at 341 Nkomo Street, Pretoria West.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1c1510">
+<meta property="og:title" content="Grace Taiken · Where elegance becomes identity">
+<meta property="og:description" content="A website preview for Grace Taiken Fashion &amp; Beauty Salon, Pretoria West. Made by TshedzaWebDev.">
+<meta property="og:image" content="https://sudo-tm12.github.io/grace-taiken/storefront.png">
+<link rel="icon" href="storefront.png">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ivory: #f6f0e7; --stone: #ece3d6; --sand: #ddd0bd; --ink: #1c1510; --ink-2: #4a3f35; --ink-3: #7a6c5e;
+    --gold: #b8882c; --gold-hi: #e9cb7a; --gold-deep: #8a6418; --wine: #5a1e2b;
+    --gold-grad: linear-gradient(135deg, #8a6418 0%, #c99a3b 28%, #f2d98c 50%, #c99a3b 72%, #8a6418 100%);
+    --r: 22px; --pad: clamp(18px, 5vw, 40px); --maxw: 1120px;
+    --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Manrope', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body { margin: 0; background: var(--ivory); color: var(--ink); font: 400 16px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 8px; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
+  .gold-text { background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .eyebrow { font: 700 0.72rem/1.2 var(--sans); letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-deep); }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.04; margin: 0; letter-spacing: -0.01em; }
+  h2 { font-size: clamp(2.1rem, 6vw, 3.4rem); }
+  p { margin: 0; }
+
+  /* preview ribbon */
+  .ribbon { background: var(--ink); color: #e9dcc6; font-size: 0.78rem; text-align: center; padding: 8px var(--pad); }
+  .ribbon b { color: var(--gold-hi); font-weight: 600; }
+
+  /* header */
+  header.top { position: sticky; top: 0; z-index: 20; background: rgba(246, 240, 231, 0.86); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid rgba(138, 100, 24, 0.14); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .mono { font: 700 1.9rem/1 var(--serif); letter-spacing: -0.12em; padding-right: 0.12em; }
+  .brand-name { display: flex; flex-direction: column; line-height: 1.05; }
+  .brand-name strong { font: 700 1.05rem var(--serif); letter-spacing: 0.14em; text-transform: uppercase; }
+  .brand-name span { font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--ink-3); }
+  nav.links { display: none; gap: 26px; font-weight: 500; font-size: 0.92rem; }
+  nav.links a { text-decoration: none; color: var(--ink-2); }
+  nav.links a:hover { color: var(--ink); }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; padding: 0 22px; border-radius: 999px; font: 600 0.96rem var(--sans); text-decoration: none; border: 0; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s; -webkit-tap-highlight-color: transparent; }
+  .btn:active { transform: scale(0.97); }
+  .btn-gold { background: var(--gold-grad); background-size: 200% 100%; color: #2a1d08; box-shadow: 0 10px 26px -12px rgba(138, 100, 24, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.5); }
+  .btn-gold:hover { background-position: 100% 0; }
+  .btn-dark { background: var(--ink); color: #f6efe3; }
+  .btn-line { border: 1px solid rgba(28, 21, 16, 0.22); color: var(--ink); background: transparent; }
+  .btn-sm { min-height: 40px; padding: 0 16px; font-size: 0.86rem; }
+  .wa-ico { width: 18px; height: 18px; flex: none; }
+
+  /* hero */
+  .hero { position: relative; overflow: hidden; padding: 44px 0 56px; }
+  .hero::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23b8882c' stroke-width='1'%3E%3Cpath d='M32 4 60 32 32 60 4 32Z'/%3E%3Cpath d='M32 16 48 32 32 48 16 32Z'/%3E%3C/g%3E%3C/svg%3E"); opacity: 0.09; mask-image: radial-gradient(120% 80% at 80% 20%, #000 20%, transparent 75%); -webkit-mask-image: radial-gradient(120% 80% at 80% 20%, #000 20%, transparent 75%); pointer-events: none; }
+  .hero .wrap { position: relative; display: grid; gap: 34px; align-items: center; }
+  .badge { position: relative; width: 132px; height: 132px; border-radius: 50%; padding: 4px; background: var(--gold-grad); box-shadow: 0 18px 40px -18px rgba(90, 60, 10, 0.6); }
+  .badge img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+  .hero h1 { font-size: clamp(2.9rem, 11vw, 5.6rem); margin-top: 14px; }
+  .hero h1 em { font-style: italic; font-weight: 500; }
+  .hero .lede { margin-top: 18px; font-size: clamp(1.02rem, 2.6vw, 1.18rem); color: var(--ink-2); max-width: 34ch; }
+  .hero .ctas { margin-top: 26px; display: grid; gap: 10px; }
+  .open { margin-top: 18px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.86rem; color: var(--ink-3); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: #2f9e5b; box-shadow: 0 0 0 4px rgba(47, 158, 91, 0.15); }
+  .hero-card { position: relative; border-radius: 28px; padding: 26px; background: linear-gradient(160deg, #241a12, #120d09); color: #f3e9d8; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(28, 21, 16, 0.7); }
+  .hero-card::after { content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1px; background: var(--gold-grad); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0.7; pointer-events: none; }
+  .hero-card .big { font: 600 clamp(4.5rem, 20vw, 7.5rem)/0.9 var(--serif); letter-spacing: -0.12em; padding-right: .1em; }
+  .hero-card ul { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
+  .hero-card li { display: flex; gap: 10px; align-items: baseline; font-size: 0.95rem; color: #e6d9c3; }
+  .hero-card li::before { content: '◆'; font-size: 0.6rem; color: var(--gold-hi); transform: translateY(-2px); }
+  .hero-card .sig { margin-top: 20px; font: italic 500 1.3rem var(--serif); color: var(--gold-hi); }
+
+  /* sections */
+  section { padding: 64px 0; }
+  .head { max-width: 640px; }
+  .head p { margin-top: 14px; color: var(--ink-2); font-size: 1.05rem; }
+
+  .grid { display: grid; gap: 14px; margin-top: 34px; }
+  .card { position: relative; background: #fffaf2; border: 1px solid rgba(138, 100, 24, 0.16); border-radius: var(--r); padding: 22px; display: flex; flex-direction: column; gap: 10px; transition: transform .25s, box-shadow .25s; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 22px 40px -28px rgba(90, 60, 10, 0.5); }
+  .icon { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; background: linear-gradient(160deg, #241a12, #3a2b1c); }
+  .icon svg { width: 28px; height: 28px; stroke: var(--gold-hi); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .card h3 { font-size: 1.6rem; margin-top: 6px; }
+  .card p { color: var(--ink-2); font-size: 0.95rem; }
+  .card .ask { margin-top: auto; padding-top: 8px; font-weight: 600; font-size: 0.9rem; color: var(--gold-deep); text-decoration: none; display: inline-flex; gap: 6px; align-items: center; }
+  .card .ask:hover { color: var(--ink); }
+
+  .dark { background: var(--ink); color: #f1e6d3; }
+  .dark .eyebrow { color: var(--gold-hi); }
+  .dark .head p { color: #cdbfa8; }
+  .steps { list-style: none; padding: 0; margin: 34px 0 0; display: grid; gap: 14px; counter-reset: s; }
+  .steps li { position: relative; padding: 22px 22px 22px 76px; border-radius: var(--r); background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(233, 203, 122, 0.16); }
+  .steps li::before { counter-increment: s; content: '0' counter(s); position: absolute; left: 22px; top: 18px; font: 600 2rem var(--serif); background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .steps strong { display: block; font: 600 1.35rem var(--serif); color: #fff6e6; }
+  .steps span { color: #cdbfa8; font-size: 0.95rem; }
+
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 34px; }
+  .tile { position: relative; aspect-ratio: 3 / 4; border-radius: 18px; overflow: hidden; background: linear-gradient(160deg, var(--stone), var(--sand)); display: flex; align-items: flex-end; padding: 14px; }
+  .tile:nth-child(3n+2) { background: linear-gradient(160deg, #2a1f16, #4a3624); color: #f1e6d3; }
+  .tile:nth-child(4n+3) { background: linear-gradient(160deg, #5a1e2b, #2b0f15); color: #f6e7ea; }
+  .tile::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 2 38 20 20 38 2 20Z' fill='none' stroke='%23c99a3b' stroke-width='1'/%3E%3C/svg%3E"); opacity: .16; }
+  .tile span { position: relative; font: 600 1.15rem/1.15 var(--serif); }
+  .tile small { position: absolute; top: 12px; left: 12px; font: 600 0.62rem var(--sans); letter-spacing: 0.18em; text-transform: uppercase; padding: 5px 9px; border-radius: 999px; background: rgba(255, 255, 255, 0.72); color: var(--ink-2); }
+  .note { margin-top: 14px; font-size: 0.86rem; color: var(--ink-3); }
+
+  .visit { display: grid; gap: 14px; margin-top: 34px; }
+  .panel { border-radius: var(--r); padding: 24px; background: #fffaf2; border: 1px solid rgba(138, 100, 24, 0.16); }
+  .panel dt { font: 700 0.7rem var(--sans); letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-deep); }
+  .panel dd { margin: 6px 0 18px; font: 600 1.35rem/1.25 var(--serif); }
+  .panel dd:last-child { margin-bottom: 0; }
+  .panel .actions { display: grid; gap: 10px; margin-top: 6px; }
+
+  .cta-band { text-align: center; padding: 72px 0; background: radial-gradient(90% 120% at 50% 0%, #2a1f16, var(--ink)); color: #f3e9d8; }
+  .cta-band h2 { max-width: 16ch; margin: 14px auto 0; }
+  .cta-band .btn { margin-top: 26px; }
+
+  footer { padding: 30px 0 calc(96px + env(safe-area-inset-bottom)); font-size: 0.82rem; color: var(--ink-3); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+  footer a { color: var(--ink-2); }
+
+  .fab { position: fixed; z-index: 30; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; background: #25d366; color: #fff; box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.45); }
+  .fab svg { width: 30px; height: 30px; }
+
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .js .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+  @media (min-width: 640px) {
+    .hero .ctas { display: flex; flex-wrap: wrap; }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery { grid-template-columns: repeat(3, 1fr); }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .panel .actions { display: flex; flex-wrap: wrap; }
+  }
+  @media (min-width: 960px) {
+    nav.links { display: flex; }
+    .hero { padding: 72px 0 88px; }
+    .hero .wrap { grid-template-columns: 1.25fr 0.9fr; gap: 56px; }
+    .grid { grid-template-columns: repeat(3, 1fr); }
+    .steps { grid-template-columns: repeat(4, 1fr); }
+    .visit { grid-template-columns: 1.2fr 1fr; }
+    section { padding: 96px 0; }
+    .fab { display: none; }
+    footer { padding-bottom: 30px; }
+  }
+</style>
+</head>
+<body>
+<div class="ribbon">A website preview for <b>Grace Taiken</b>, made by TshedzaWebDev. Your own photos and final details go in before launch.</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Grace Taiken, home">
+      <span class="mono gold-text" aria-hidden="true">GT</span>
+      <span class="brand-name"><strong>Grace Taiken</strong><span>Fashion &amp; Beauty Salon</span></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#make">What we make</a><a href="#how">How it works</a><a href="#work">Our work</a><a href="#visit">Visit us</a>
+    </nav>
+    <a class="btn btn-dark btn-sm wa" data-msg="Hi Grace Taiken, I saw your website and I'd like to book a fitting." href="https://wa.me/27619879968">
+      <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="badge"><img src="storefront.png" width="240" height="240" alt="The Grace Taiken sign: a gold GT monogram above “Grace Taiken, Fashion and Beauty Salon, Where Elegance Becomes Identity”"></div>
+        <p class="eyebrow" style="margin-top:22px">Fashion designer &amp; dressmaker · Pretoria West</p>
+        <h1>Where elegance <em class="gold-text">becomes identity.</em></h1>
+        <p class="lede">Made-to-measure clothing for men, women and children: wedding, traditional and heritage, formal and dinner wear, designed and sewn by hand at our studio in Pretoria West.</p>
+        <div class="ctas">
+          <a class="btn btn-gold wa" data-msg="Hi Grace Taiken, I saw your website and I'd like to book a fitting." href="https://wa.me/27619879968">
+            <svg class="wa-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+            Book a fitting on WhatsApp
+          </a>
+          <a class="btn btn-line" href="#make">See what we make</a>
+        </div>
+        <p class="open"><span class="dot" aria-hidden="true"></span>341 Nkomo Street, Pretoria West · open until 18:00</p>
+      </div>
+
+      <aside class="hero-card reveal" aria-label="At a glance">
+        <div class="big gold-text" aria-hidden="true">GT</div>
+        <ul>
+          <li>Designed for you, sewn to your measurements</li>
+          <li>Men, women, young adults and children</li>
+          <li>Wedding, traditional, heritage, formal and dinner wear</li>
+          <li>Doeks and headwraps to finish the look</li>
+        </ul>
+        <p class="sig">Bring your idea. Leave with your identity.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="make">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">What we make</p>
+        <h2>Every occasion, <span class="gold-text">made to measure.</span></h2>
+        <p>Tell us about the day, the fabric you love or a picture you saved. We design it with you and sew it to fit.</p>
+      </div>
+      <div class="grid">
+        <article class="card reveal">
+          <div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 3h8M13 3c0 3-2 4-2 7l-6 18h22l-6-18c0-3-2-4-2-7"/><path d="M11 10h10M9 22c3 1 11 1 14 0"/></svg></div>
+          <h3>Wedding wear</h3>
+          <p>Gowns, suits and outfits for the couple, the bridal party and the family, including traditional ceremony looks.</p>
+          <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about wedding wear." href="https://wa.me/27619879968">Ask about this →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 29 16 16 29 3 16Z"/><path d="M16 9l7 7-7 7-7-7Z"/><path d="M16 14l2 2-2 2-2-2Z"/></svg></div>
+          <h3>Traditional &amp; heritage</h3>
+          <p>Cultural and Heritage Day outfits that honour where you come from, cut to look sharp today.</p>
+          <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about traditional and heritage wear." href="https://wa.me/27619879968">Ask about this →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 11l9 5-9 5Z"/><path d="M28 11l-9 5 9 5Z"/><rect x="13" y="13" width="6" height="6" rx="1.5"/></svg></div>
+          <h3>Formal &amp; dinner wear</h3>
+          <p>Evening dresses, matric farewell looks and dinner suits for the nights you want to remember.</p>
+          <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about formal or dinner wear." href="https://wa.me/27619879968">Ask about this →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M11 4h10l6 6-4 3-2-2v17H11V11l-2 2-4-3Z"/><path d="M13 4c0 2 1.5 3.5 3 3.5S19 6 19 4"/></svg></div>
+          <h3>Men's tailoring</h3>
+          <p>Suits, shirts and traditional menswear made to your measurements, not taken off a rail.</p>
+          <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about men's tailoring." href="https://wa.me/27619879968">Ask about this →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 6h8l4 5-3 2v4l4 11H7l4-11v-4l-3-2Z"/><path d="M13 6c0 1.6 1.3 3 3 3s3-1.4 3-3"/></svg></div>
+          <h3>Children's wear</h3>
+          <p>Little outfits for weddings, church, school functions and family celebrations, so the whole family matches.</p>
+          <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about children's wear." href="https://wa.me/27619879968">Ask about this →</a>
+        </article>
+        <article class="card reveal">
+          <div class="icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 17c0-6 4.5-10 10-10s10 4 10 10"/><path d="M5 17c4 2 18 2 22 0"/><path d="M19 9c3 1 4 4 3 7M21 18l3 6M19 19l1 6"/></svg></div>
+          <h3>Doeks &amp; headwraps</h3>
+          <p>Doeks to match your outfit or to wear every day, in the colours and fabrics you choose.</p>
+          <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about doeks." href="https://wa.me/27619879968">Ask about this →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="dark">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">How it works</p>
+        <h2>From your idea <span class="gold-text">to your fitting.</span></h2>
+        <p>No guesswork: you see it come together before the big day.</p>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><strong>Share your idea</strong><span>Send a picture, a sketch or just the occasion on WhatsApp.</span></li>
+        <li class="reveal"><strong>Get measured</strong><span>Visit us at 341 Nkomo Street and we take your measurements.</span></li>
+        <li class="reveal"><strong>Your fitting</strong><span>Try it on and we adjust until it fits perfectly.</span></li>
+        <li class="reveal"><strong>Wear it proudly</strong><span>Collect your outfit, ready for your day.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Our work</p>
+        <h2>Made at <span class="gold-text">Grace Taiken.</span></h2>
+        <p>Recent outfits from our studio.</p>
+      </div>
+      <div class="gallery" aria-label="Gallery (photos coming)">
+        <div class="tile reveal"><small>Your photo</small><span>Wedding gown</span></div>
+        <div class="tile reveal"><small>Your photo</small><span>Heritage Day look</span></div>
+        <div class="tile reveal"><small>Your photo</small><span>Dinner dress</span></div>
+        <div class="tile reveal"><small>Your photo</small><span>Men's suit</span></div>
+        <div class="tile reveal"><small>Your photo</small><span>Matching family outfits</span></div>
+        <div class="tile reveal"><small>Your photo</small><span>Doeks</span></div>
+      </div>
+      <p class="note">Preview note: these spaces show your real photos once you send them.</p>
+    </div>
+  </section>
+
+  <section id="visit" style="padding-top:0">
+    <div class="wrap">
+      <div class="head reveal">
+        <p class="eyebrow">Visit us</p>
+        <h2>Come in for <span class="gold-text">a fitting.</span></h2>
+      </div>
+      <div class="visit">
+        <dl class="panel reveal">
+          <dt>Studio</dt><dd>341 Nkomo Street<br>Pretoria West</dd>
+          <dt>Hours</dt><dd>Open until 18:00</dd>
+          <dt>WhatsApp</dt><dd>061 987 9968</dd>
+        </dl>
+        <div class="panel reveal">
+          <p class="eyebrow">Fastest way to reach us</p>
+          <p style="margin:10px 0 18px;color:var(--ink-2)">Send us a message with your occasion and date, and we'll get back to you with the next step.</p>
+          <div class="actions">
+            <a class="btn btn-gold wa" data-msg="Hi Grace Taiken, I saw your website and I'd like to book a fitting." href="https://wa.me/27619879968">Message us on WhatsApp</a>
+            <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=341%20Nkomo%20Street%2C%20Pretoria%20West" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-line" href="tel:+27619879968">Call 061 987 9968</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--gold-hi)">Have an occasion coming up?</p>
+      <h2>Let's make something <span class="gold-text">that's yours.</span></h2>
+      <a class="btn btn-gold wa" data-msg="Hi Grace Taiken, I have an occasion coming up and I'd like an outfit made." href="https://wa.me/27619879968">Start on WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Grace Taiken Fashion &amp; Beauty Salon, Pretoria West</span>
+    <span>Website preview by <a href="https://tshedzawebdev.co.za">TshedzaWebDev</a></span>
+  </div>
+</footer>
+
+<a class="fab wa" data-msg="Hi Grace Taiken, I saw your website and I'd like to book a fitting." href="https://wa.me/27619879968" aria-label="Message Grace Taiken on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+  // WhatsApp links carry a ready-made message for each service.
+  document.querySelectorAll('a.wa[data-msg]').forEach(function (a) { a.href = 'https://wa.me/27619879968?text=' + encodeURIComponent(a.dataset.msg) })
+  // Fade sections in as they scroll into view (everything is visible without JS or with reduced motion).
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }) }, { rootMargin: '0px 0px -8% 0px' })
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el) })
+  } else { document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in') }) }
+</script>
+</body>
+</html>
