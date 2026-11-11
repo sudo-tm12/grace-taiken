@@ -2,43 +2,53 @@
 
 The website for **Grace Taiken Fashion & Beauty Salon** (WhatsApp name "taikenfashion"), a fashion designer and dressmaker at 341 Nkomo Street, Pretoria West. Built by TshedzaWebDev as a free preview; it becomes the live site if they go ahead.
 
-**Preview:** https://sudo-tm12.github.io/grace-taiken/ (GitHub Pages, deployed from the `main` branch root)
+**Preview:** <https://sudo-tm12.github.io/grace-taiken/> (GitHub Pages, deployed from the `main` branch root)
 
 ## What it is
 
-- **Format:** one self-contained page (`index.html`). There is no build step; edit the file and push.
-- **Design:** "the atelier", built from their sign: gold on deep espresso, ivory sections, and Cormorant Garamond with Manrope.
-- **Hero:** a fabric swatch book that fans open on a gold rivet (lace, shweshwe, satin, wax print, pinstripe), with a "GT made to measure" hang tag.
-- **Fabrics:** each service card is topped with its fabric. All the fabrics are drawn in code (SVG/CSS patterns), with no stock photos.
-- **Tape measure:** it runs across the page and slides as you scroll.
-- **Process:** "How it works" runs along a stitched line on desktop; on phones the steps are cards that stack as you scroll.
+One self-contained page (`index.html`, no build step), plus `img/` (photos) and `storefront.png` (the client's sign, from their WhatsApp Business profile picture). Every button opens WhatsApp (+27 61 987 9968) with a message written for that service. The page carries `noindex` until the client says go.
 
-**Scroll effects:** one `requestAnimationFrame` loop drives them all. It works only on what is on screen and moves things with transform and opacity only. Everything is off under reduced motion.
+- **Design:** "the atelier": gold on deep espresso, ivory sections, Cormorant Garamond with Manrope. Fabrics (lace, shweshwe, satin, wax print, pinstripe, gingham) are drawn in code and used as swatch chips and textures.
+- **Hero: the atelier reel.** A tall rounded frame crossfades the six photos with a slow zoom.
+  - Thin progress bars sit along the top.
+  - A caption names the service and links to WhatsApp for it.
+  - A soft glow behind the frame takes each photo's colour.
+  - Tap right for the next photo, left for the previous; swipe; press and hold to pause. It pauses off screen.
+  - On phones the hero is exactly one screen (`100svh`): headline, reel, booking button and address are visible before the first scroll. Checked at 360×780, 375×667, 390×844, 412×915 and 1440×900.
+- **What we make:** photo cards. Each photo zooms out gently as it arrives and drifts with the scroll, with its fabric as a chip.
+- **Scroll story:**
+  - a gold needle sews a thread down the page
+  - occasion ribbons drift across
+  - a pinned statement fills word by word
+  - on phones, the step cards stack as you scroll
+  - the closing GT tag swings with your scroll speed
+- **Visit:** a live Google map with a drawn fallback.
 
-- **Needle and thread:** a gold needle sews a thread down the page as you scroll. The thread follows a faint chalk line and crosses the page between sections.
-- **Hero (desktop):** the headline rises in line by line with a gold shimmer, gold dust drifts behind it, and the swatch book fans wider as you scroll.
-- **Hero (phones):** exactly one screen (`100svh`), tested at 360×780, 375×667, 390×844 and 412×915.
-  - **Layout:** headline, swatch book, the picked fabric, the booking button, the address and the tape measure all show before the first scroll.
-  - **Entrance:** the swatches are dealt in one by one, then fan open.
-  - **Picking a fabric:** tap one, or swipe the fan (it tilts under the finger). The picked swatch springs up, the hero glow takes its colour, and the info strip updates with an "Ask" link to WhatsApp for that service.
-  - **Before anyone touches it:** the fan cycles through the fabrics on its own, with a "Tap or swipe" hint.
-  - **Gold dust:** it drifts away from the finger, and a tap throws sparkles.
-  - **Fan sizing:** the size and vertical position are set in JS (`fitFan`) from the space available.
-- **Occasions:** two ribbons drift in opposite directions and speed up with your scroll.
-- **Fabric cards:** each fabric unrolls (clip reveal) with a light sweep, and the patterns drift with the scroll, so the satin shimmers.
-- **Statement:** a pinned line ("Bring your idea. Leave with your identity.") fills word by word in ink and gold, with a large GT watermark turning behind it.
-- **Closing:** the GT tag swings with your scroll speed.
-- **Headings:** they rise in word by word, and the gold buttons carry a passing shine.
-- **Visit the studio:** a live Google map, with a drawn fallback.
-- **Phone action bar:** WhatsApp, Call and Directions, shown after the first scroll.
-- **Buttons:** every one opens WhatsApp (+27 61 987 9968) with a message written for that service.
-- **Not in search engines:** the page carries `noindex` until the client says go.
-- **Extras:** JSON-LD ClothingStore data and reduced-motion support.
-- **Logo:** `storefront.png` is the client's sign, taken from their WhatsApp Business profile picture.
+## Smoothness (how the motion is built)
+
+- **One loop:** a single `requestAnimationFrame` loop reads all positions first and writes afterwards, so there are no forced re-layouts. Every scroll-driven value eases towards its target (`glide`) instead of jumping.
+- **Thread:** one SVG path per section, so only the one being sewn repaints. The needle reads from a table of points worked out once, never from `getPointAtLength` while scrolling.
+- **Cheap properties only:** the loop animates only `transform` and `opacity`. There is no backdrop blur on the sticky header or the phone bar, and no blend modes.
+- **Measured:** a scripted 5,200 px scroll at phone size gave 0 frames over 33 ms (the previous version had 4).
+- **Reduced motion:** everything is switched off when the visitor asks for less motion.
+
+## Photos: stand-ins until the client sends their own
+
+The six photos are freely licensed from Wikimedia Commons (CC BY-SA 4.0) and credited in the footer.
+
+- `wedding.webp`: Photosbyosagie
+- `heritage.webp`: Merriammahlaule.mm
+- `evening.webp`: Chidi "Lex Ash" Ashimole
+- `menswear.webp`: Ibrahima xaalil Ndiaye
+- `children.webp`: Mathobelah
+- `doeks.webp`: Jamie Tubers
+
+Source pages are in `img/credits.json`. The photos were cropped to 800×880, so the crops are shared under CC BY-SA 4.0 too.
+
+They show real people who have not agreed to advertise this business, so **replace them with Grace Taiken's own photos before launch**: same filenames, 800×880 WebP. Then remove the credits line.
 
 ## Before launch (if they go ahead)
 
-- Add a gallery section with their real photos (the fabric visuals stay as the design language).
+- Their own photos (see above), and their real logo file in place of the sign photo.
 - Confirm their full opening hours, the services list, and "dukes" = doeks.
-- Use their real logo file in the header in place of the sign photo.
 - Remove `noindex` and connect their own domain if they want one.
