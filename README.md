@@ -16,7 +16,14 @@ The website for **Grace Taiken Fashion & Beauty Salon** (WhatsApp name "taikenfa
 **Scroll effects:** one `requestAnimationFrame` loop drives them all. It works only on what is on screen and moves things with transform and opacity only. Everything is off under reduced motion.
 
 - **Needle and thread:** a gold needle sews a thread down the page as you scroll. The thread follows a faint chalk line and crosses the page between sections.
-- **Hero:** the headline rises in line by line with a gold shimmer, gold dust drifts behind it, and the swatch book fans wider as you scroll.
+- **Hero (desktop):** the headline rises in line by line with a gold shimmer, gold dust drifts behind it, and the swatch book fans wider as you scroll.
+- **Hero (phones):** exactly one screen (`100svh`), tested at 360×780, 375×667, 390×844 and 412×915.
+  - **Layout:** headline, swatch book, the picked fabric, the booking button, the address and the tape measure all show before the first scroll.
+  - **Entrance:** the swatches are dealt in one by one, then fan open.
+  - **Picking a fabric:** tap one, or swipe the fan (it tilts under the finger). The picked swatch springs up, the hero glow takes its colour, and the info strip updates with an "Ask" link to WhatsApp for that service.
+  - **Before anyone touches it:** the fan cycles through the fabrics on its own, with a "Tap or swipe" hint.
+  - **Gold dust:** it drifts away from the finger, and a tap throws sparkles.
+  - **Fan sizing:** the size and vertical position are set in JS (`fitFan`) from the space available.
 - **Occasions:** two ribbons drift in opposite directions and speed up with your scroll.
 - **Fabric cards:** each fabric unrolls (clip reveal) with a light sweep, and the patterns drift with the scroll, so the satin shimmers.
 - **Statement:** a pinned line ("Bring your idea. Leave with your identity.") fills word by word in ink and gold, with a large GT watermark turning behind it.
