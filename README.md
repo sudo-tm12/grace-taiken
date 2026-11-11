@@ -1,20 +1,27 @@
-# Grace Taiken: website preview
+# Grace Taiken: website
 
-A free website preview for **Grace Taiken Fashion & Beauty Salon** (WhatsApp name "taikenfashion"), a fashion designer and dressmaker at 341 Nkomo Street, Pretoria West. Made by TshedzaWebDev.
+The website for **Grace Taiken Fashion & Beauty Salon** (WhatsApp name "taikenfashion"), a fashion designer and dressmaker at 341 Nkomo Street, Pretoria West. Built by TshedzaWebDev as a free preview; it becomes the live site if they go ahead.
 
-**Live preview:** https://sudo-tm12.github.io/grace-taiken/ (GitHub Pages, from the `main` branch)
+**Preview:** https://sudo-tm12.github.io/grace-taiken/ (GitHub Pages, deployed from the `main` branch root)
 
 ## What it is
 
 - **Format:** one self-contained page (`index.html`). There is no build step; edit the file and push.
-- **Content:** what they make (wedding, traditional and heritage, formal and dinner, men's, children's, doeks), how it works, the gallery, and visit details.
-- **Buttons:** every one opens WhatsApp (+27 61 987 9968) with a ready-made message.
-- **Not in search engines:** the page is marked `noindex` until the client says go.
+- **Design:** "the atelier", built from their sign: gold on deep espresso, ivory sections, and Cormorant Garamond with Manrope.
+- **Hero:** a fabric swatch book that fans open on a gold rivet (lace, shweshwe, satin, wax print, pinstripe), with a "GT made to measure" hang tag.
+- **Fabrics:** each service card is topped with its fabric. All the fabrics are drawn in code (SVG/CSS patterns), with no stock photos.
+- **Tape measure:** it runs across the page and slides as you scroll.
+- **Process:** "How it works" runs along a stitched line.
+- **Visit the studio:** a live Google map, with a drawn fallback.
+- **Phone action bar:** WhatsApp, Call and Directions, shown after the first scroll.
+- **Buttons:** every one opens WhatsApp (+27 61 987 9968) with a message written for that service.
+- **Not in search engines:** the page carries `noindex` until the client says go.
+- **Extras:** JSON-LD ClothingStore data and reduced-motion support.
 - **Logo:** `storefront.png` is the client's sign, taken from their WhatsApp Business profile picture.
 
 ## Before launch (if they go ahead)
 
-- Replace the six gallery tiles with their real photos.
+- Add a gallery section with their real photos (the fabric visuals stay as the design language).
 - Confirm their full opening hours, the services list, and "dukes" = doeks.
-- Swap the typographic "GT" for their real logo file.
-- Remove the preview ribbon and the `noindex` tag.
+- Use their real logo file in the header in place of the sign photo.
+- Remove `noindex` and connect their own domain if they want one.
