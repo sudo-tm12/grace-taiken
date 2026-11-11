@@ -24,13 +24,13 @@
     --ink: #1b140e; --ink-2: #4b3f33; --ink-3: #7b6d5f; --cream: #f3e8d6; --cream-2: #cdbda6;
     --gold: #c39a45; --gold-hi: #ecd089; --gold-deep: #8a6418;
     --gold-grad: linear-gradient(120deg, #8a6418 0%, #c9993b 26%, #f4dc94 50%, #c9993b 74%, #8a6418 100%);
-    --gold-grad-deep: linear-gradient(120deg, #6e4c0e 0%, #a87a22 35%, #c9993b 55%, #8a6418 100%); /* for gold type on ivory */
+    --gold-grad-deep: linear-gradient(120deg, #6e4c0e 0%, #a87a22 35%, #c9993b 55%, #8a6418 100%); /* gold type on ivory */
     --line: rgba(138, 100, 24, 0.18);
     --pad: clamp(18px, 5vw, 44px); --maxw: 1180px;
     --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Manrope', system-ui, sans-serif;
     --ease: cubic-bezier(.2, .8, .2, 1);
 
-    /* fabrics */
+    /* fabrics (drawn, no photos) */
     --lace: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30'%3E%3Crect width='30' height='30' fill='%23f4ece0'/%3E%3Cg fill='none' stroke='%23c9b490' stroke-width='.9'%3E%3Ccircle cx='15' cy='15' r='6.5'/%3E%3Ccircle cx='15' cy='15' r='2.6'/%3E%3Ccircle cx='0' cy='0' r='6.5'/%3E%3Ccircle cx='30' cy='0' r='6.5'/%3E%3Ccircle cx='0' cy='30' r='6.5'/%3E%3Ccircle cx='30' cy='30' r='6.5'/%3E%3C/g%3E%3Cg fill='%23c9b490'%3E%3Ccircle cx='15' cy='5' r='1'/%3E%3Ccircle cx='15' cy='25' r='1'/%3E%3Ccircle cx='5' cy='15' r='1'/%3E%3Ccircle cx='25' cy='15' r='1'/%3E%3C/g%3E%3C/svg%3E");
     --shweshwe: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26'%3E%3Crect width='26' height='26' fill='%23223369'/%3E%3Cg stroke='%23e8edfb' fill='none' stroke-width='.9'%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3Cpath d='M13 3.5v3M13 19.5v3M3.5 13h3M19.5 13h3M6.5 6.5l1.8 1.8M17.7 17.7l1.8 1.8M19.5 6.5l-1.8 1.8M8.3 17.7l-1.8 1.8'/%3E%3C/g%3E%3Cg fill='%23e8edfb'%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3Ccircle cx='0' cy='0' r='1.2'/%3E%3Ccircle cx='26' cy='0' r='1.2'/%3E%3Ccircle cx='0' cy='26' r='1.2'/%3E%3Ccircle cx='26' cy='26' r='1.2'/%3E%3C/g%3E%3C/svg%3E");
     --wax: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64'%3E%3Crect width='64' height='64' fill='%23bf4e1f'/%3E%3Ccircle cx='32' cy='32' r='19' fill='%23f0b534'/%3E%3Ccircle cx='32' cy='32' r='13' fill='%231c6467'/%3E%3Ccircle cx='32' cy='32' r='5.5' fill='%23f6e6c4'/%3E%3Cg fill='%231c6467'%3E%3Ccircle cx='0' cy='0' r='11'/%3E%3Ccircle cx='64' cy='0' r='11'/%3E%3Ccircle cx='0' cy='64' r='11'/%3E%3Ccircle cx='64' cy='64' r='11'/%3E%3C/g%3E%3Cg fill='%23f0b534'%3E%3Ccircle cx='0' cy='0' r='4.5'/%3E%3Ccircle cx='64' cy='0' r='4.5'/%3E%3Ccircle cx='0' cy='64' r='4.5'/%3E%3Ccircle cx='64' cy='64' r='4.5'/%3E%3C/g%3E%3C/svg%3E");
@@ -44,14 +44,15 @@
   ::selection { background: var(--gold-hi); color: var(--ink); }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--pad); }
   .gold { background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  #make .gold, #visit .gold { background-image: var(--gold-grad-deep); }
+  #make .gold, #visit .gold, .statement .gold { background-image: var(--gold-grad-deep); }
   .eyebrow { font: 700 0.7rem/1.3 var(--sans); letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-deep); }
   h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.02; margin: 0; letter-spacing: -0.012em; }
   h2 { font-size: clamp(2.3rem, 6.4vw, 3.9rem); }
   em { font-style: italic; font-weight: 500; }
   p { margin: 0; }
+  main { position: relative; }
 
-  /* ── fabrics ─────────────────────────────────────────── */
+  /* fabrics */
   .f-lace { background: var(--lace); }
   .f-shweshwe { background: var(--shweshwe); }
   .f-wax { background: var(--wax); }
@@ -59,7 +60,7 @@
   .f-pin { background-color: #25272c; background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.16) 0 1px, transparent 1px 13px), repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.025) 0 2px, transparent 2px 4px); }
   .f-gingham { background-color: #f7e7e5; background-image: repeating-linear-gradient(0deg, rgba(204, 108, 128, 0.22) 0 9px, transparent 9px 18px), repeating-linear-gradient(90deg, rgba(204, 108, 128, 0.22) 0 9px, transparent 9px 18px); }
 
-  /* ── header ──────────────────────────────────────────── */
+  /* ── header ── */
   header.top { position: fixed; inset: 0 0 auto 0; z-index: 40; transition: background .35s var(--ease), box-shadow .35s var(--ease); }
   header.top.solid { background: rgba(23, 17, 12, 0.95); -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%); box-shadow: 0 1px 0 rgba(236, 208, 137, 0.14); }
   .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 14px; height: 72px; }
@@ -71,29 +72,38 @@
   nav.links a { text-decoration: none; color: var(--cream-2); transition: color .2s; }
   nav.links a:hover { color: var(--cream); }
 
-  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 52px; padding: 0 24px; border-radius: 999px; font: 600 0.96rem var(--sans); letter-spacing: 0.01em; text-decoration: none; border: 0; cursor: pointer; white-space: nowrap; transition: transform .25s var(--ease), box-shadow .25s, background-position .6s var(--ease); -webkit-tap-highlight-color: transparent; }
-  .btn:active { transform: scale(0.97); }
+  .btn { position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 52px; padding: 0 24px; border-radius: 999px; font: 600 0.96rem var(--sans); letter-spacing: 0.01em; text-decoration: none; border: 0; cursor: pointer; white-space: nowrap; transition: transform .25s var(--ease), box-shadow .25s, background-position .6s var(--ease); -webkit-tap-highlight-color: transparent; }
+  .btn:active { transform: scale(0.96); }
   .btn svg { width: 19px; height: 19px; flex: none; }
   .btn-gold { background: var(--gold-grad); background-size: 220% 100%; color: #241806; box-shadow: 0 12px 30px -14px rgba(201, 153, 59, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.55); }
+  .btn-gold::after { /* a shine that crosses the gold now and then */ content: ''; position: absolute; z-index: -1; top: 0; bottom: 0; left: -60%; width: 45%; background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.6), transparent); transform: skewX(-20deg); animation: shine 5.5s ease-in-out infinite; }
+  @keyframes shine { 0%, 72% { left: -60%; } 100% { left: 130%; } }
   .btn-gold:hover { background-position: 100% 0; }
   .btn-ghost { color: var(--cream); box-shadow: inset 0 0 0 1px rgba(243, 232, 214, 0.32); }
   .btn-ghost:hover { box-shadow: inset 0 0 0 1px rgba(243, 232, 214, 0.7); }
-  .btn-ink { background: var(--ink); color: var(--cream); }
   .btn-line { color: var(--ink); box-shadow: inset 0 0 0 1px rgba(27, 20, 14, 0.22); }
   .btn-line:hover { box-shadow: inset 0 0 0 1px rgba(27, 20, 14, 0.6); }
   .btn-sm { min-height: 42px; padding: 0 18px; font-size: 0.88rem; }
 
-  /* ── hero ────────────────────────────────────────────── */
+  /* ── hero ── */
   .hero { position: relative; overflow: hidden; color: var(--cream); padding: calc(72px + 40px) 0 0;
     background:
       radial-gradient(55% 45% at 78% 28%, rgba(236, 208, 137, 0.16), transparent 62%),
       radial-gradient(45% 55% at 12% 88%, rgba(124, 35, 56, 0.32), transparent 70%),
       linear-gradient(165deg, #21180f 0%, #120c08 70%); }
-  .hero::before { /* silk folds */ content: ''; position: absolute; inset: -20%; background: repeating-linear-gradient(112deg, transparent 0 90px, rgba(255, 240, 210, 0.035) 140px, transparent 190px); transform: rotate(-4deg); pointer-events: none; }
-  .hero::after { /* grain */ content: ''; position: absolute; inset: 0; opacity: .25; mix-blend-mode: overlay; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"); }
+  .hero::before { content: ''; position: absolute; inset: -20%; background: repeating-linear-gradient(112deg, transparent 0 90px, rgba(255, 240, 210, 0.035) 140px, transparent 190px); transform: rotate(-4deg); pointer-events: none; }
+  .hero::after { content: ''; position: absolute; inset: 0; opacity: .25; mix-blend-mode: overlay; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"); }
+  .dust { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
   .hero .wrap { position: relative; z-index: 1; display: grid; gap: 30px; }
+  .hero-copy { will-change: transform, opacity; }
   .hero h1 { font-size: clamp(3.1rem, 11.5vw, 5.3rem); margin-top: 16px; color: #fbf3e4; }
-  .hero h1 em { display: block; }
+  .ln { display: block; overflow: hidden; padding: 0 .08em .14em; margin: 0 -.08em -.14em; }
+  .li { display: block; }
+  .js .li { transform: translateY(108%); transition: transform 1.2s var(--ease); }
+  .js .hero.ready .li { transform: none; }
+  .js .hero.ready .ln:nth-child(2) .li { transition-delay: .14s; }
+  .li.gold { background-size: 230% 100%; animation: shimmer 7s ease-in-out infinite; }
+  @keyframes shimmer { 0%, 100% { background-position: 0% 0; } 50% { background-position: 100% 0; } }
   .hero .eyebrow { color: var(--gold-hi); }
   .lede { margin-top: 20px; font-size: clamp(1.03rem, 2.4vw, 1.2rem); line-height: 1.65; color: #d9cbb3; max-width: 36ch; }
   .ctas { margin-top: 28px; display: grid; gap: 10px; }
@@ -102,64 +112,79 @@
   .facts li::before { content: ''; width: 5px; height: 5px; transform: rotate(45deg); background: var(--gold); }
   .open-dot { width: 7px !important; height: 7px !important; border-radius: 50%; transform: none !important; background: #3fbf72 !important; box-shadow: 0 0 0 4px rgba(63, 191, 114, 0.16); }
 
-  /* swatch book */
-  /* A fan deck: cards pivot on a rivet near the base; each card's label sits at the top, where the fan spreads. */
-  .book { --w: 128px; --h: 222px; --b: 18px; position: relative; height: 268px; margin: 6px auto 0; width: min(100%, 420px); }
-  .sw { position: absolute; left: 50%; bottom: var(--b); width: var(--w); height: var(--h); margin-left: calc(var(--w) / -2); border-radius: 14px; transform-origin: 50% 90%; box-shadow: 0 24px 40px -18px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.08); overflow: hidden; transition: transform .9s var(--ease); }
-  .sw::after { /* sheen */ content: ''; position: absolute; inset: 0; background: linear-gradient(130deg, rgba(255, 255, 255, 0.18), transparent 38%, transparent 70%, rgba(0, 0, 0, 0.25)); }
-  .sw::before { /* pinked edge under the label */ content: ''; position: absolute; z-index: 1; left: 0; right: 0; top: 47px; height: 8px; background: radial-gradient(circle at 4px 0, var(--paper) 4px, transparent 4.5px) 0 0 / 8px 8px repeat-x; }
+  /* swatch book: a fan deck on a rivet; --spread opens it further as you scroll */
+  .book { --w: 128px; --h: 222px; --b: 18px; --spread: 0; position: relative; height: 268px; margin: 6px auto 0; width: min(100%, 420px); }
+  .sw { position: absolute; left: 50%; bottom: var(--b); width: var(--w); height: var(--h); margin-left: calc(var(--w) / -2); border-radius: 14px; transform-origin: 50% 90%; box-shadow: 0 24px 40px -18px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.08); overflow: hidden; transition: transform 1s var(--ease);
+    transform: rotate(calc(var(--a) * (1 + var(--spread) * .3))) translateY(calc(var(--spread) * -10px)); }
+  .book.scrub .sw { transition: transform .35s ease-out; }
+  .sw:nth-child(1) { --a: -40deg; } .sw:nth-child(2) { --a: -20deg; } .sw:nth-child(3) { --a: 0deg; } .sw:nth-child(4) { --a: 20deg; } .sw:nth-child(5) { --a: 40deg; }
+  .js .book:not(.open) .sw { transform: rotate(0deg); }
+  .sw::after { content: ''; position: absolute; inset: 0; background: linear-gradient(130deg, rgba(255, 255, 255, 0.18), transparent 38%, transparent 70%, rgba(0, 0, 0, 0.25)); }
+  .sw::before { content: ''; position: absolute; z-index: 1; left: 0; right: 0; top: 47px; height: 8px; background: radial-gradient(circle at 4px 0, var(--paper) 4px, transparent 4.5px) 0 0 / 8px 8px repeat-x; }
   .sw .tag { position: absolute; z-index: 1; left: 0; right: 0; top: 0; height: 48px; background: var(--paper); color: var(--ink); padding: 8px 12px; display: flex; flex-direction: column; justify-content: center; }
   .sw .tag b { font: 600 1.05rem/1 var(--serif); }
   .sw .tag small { margin-top: 4px; font: 600 0.55rem var(--sans); letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-3); }
-  .sw:nth-child(1) { transform: rotate(-40deg); }
-  .sw:nth-child(2) { transform: rotate(-20deg); }
-  .sw:nth-child(3) { transform: rotate(0deg); }
-  .sw:nth-child(4) { transform: rotate(20deg); }
-  .sw:nth-child(5) { transform: rotate(40deg); }
   .rivet { position: absolute; z-index: 5; left: 50%; bottom: calc(var(--b) + var(--h) * 0.1 - 9px); width: 18px; height: 18px; margin-left: -9px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff4cf, #c9993b 45%, #6d4c12 100%); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(0, 0, 0, 0.25); }
-  .js .book:not(.open) .sw { transform: rotate(0deg); }
-  .hangtag { position: absolute; z-index: 6; top: 6px; right: 6%; width: 92px; padding: 16px 10px 12px; border-radius: 10px 10px 12px 12px; background: var(--gold-grad); color: #2a1c07; text-align: center; box-shadow: 0 16px 30px -14px rgba(0, 0, 0, 0.8); transform: rotate(8deg); animation: sway 6s ease-in-out infinite; transform-origin: 50% -30px; }
+  .hangtag { position: absolute; z-index: 6; top: 6px; right: 6%; width: 92px; padding: 16px 10px 12px; border-radius: 10px 10px 12px 12px; background: var(--gold-grad); color: #2a1c07; text-align: center; box-shadow: 0 16px 30px -14px rgba(0, 0, 0, 0.8); transform-origin: 50% -30px; transform: rotate(var(--swing, 8deg)); }
   .hangtag::before { content: ''; position: absolute; top: 7px; left: 50%; width: 9px; height: 9px; margin-left: -4.5px; border-radius: 50%; background: #1e150c; box-shadow: inset 0 0 0 2px #e9cd85; }
   .hangtag::after { content: ''; position: absolute; top: -34px; left: 50%; width: 1px; height: 42px; background: linear-gradient(#0000, #e9cd85); }
   .hangtag b { display: block; font: 700 1.9rem/1 var(--serif); letter-spacing: -0.1em; padding-right: .1em; margin-top: 6px; }
   .hangtag small { display: block; margin-top: 4px; font: 700 0.5rem/1.3 var(--sans); letter-spacing: 0.2em; text-transform: uppercase; }
-  @keyframes sway { 0%, 100% { transform: rotate(8deg); } 50% { transform: rotate(3deg); } }
 
-  /* tape measure */
+  /* tape measure (slides with the scroll) */
   .tape-band { position: relative; z-index: 2; margin-top: -8px; height: 66px; overflow: hidden; }
   .tape { position: absolute; left: -4%; right: -4%; top: 10px; height: 46px; transform: rotate(-1.6deg); background: #efd99f; box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.6), inset 0 -1px 0 rgba(0, 0, 0, 0.12); overflow: hidden; }
   .tape-track { position: absolute; top: 0; bottom: 0; left: 0; width: 6000px; will-change: transform;
-    background-image:
-      repeating-linear-gradient(90deg, #2a2016 0 1px, transparent 1px 10px),
-      repeating-linear-gradient(90deg, #2a2016 0 1.4px, transparent 1.4px 50px),
-      repeating-linear-gradient(90deg, #2a2016 0 1.8px, transparent 1.8px 100px);
+    background-image: repeating-linear-gradient(90deg, #2a2016 0 1px, transparent 1px 10px), repeating-linear-gradient(90deg, #2a2016 0 1.4px, transparent 1.4px 50px), repeating-linear-gradient(90deg, #2a2016 0 1.8px, transparent 1.8px 100px);
     background-size: 100% 9px, 100% 15px, 100% 21px; background-repeat: repeat-x; }
   .tape-track span { position: absolute; top: 21px; transform: translateX(-50%); font: 700 0.72rem var(--sans); color: #2a2016; }
   .tape-track span.red { color: #a3262c; }
 
-  /* ── sections ────────────────────────────────────────── */
+  /* the thread: a gold needle sews down the page as you scroll, over a faint chalk line */
+  .thread { position: absolute; z-index: 4; left: 0; top: 0; width: 100%; pointer-events: none; overflow: visible; }
+  .thread .chalk { fill: none; stroke: rgba(138, 100, 24, 0.22); stroke-width: 1.2; stroke-dasharray: 2 7; stroke-linecap: round; }
+  .thread .silk { fill: none; stroke: url(#threadGold); stroke-width: 2.1; stroke-linecap: round; }
+  .needle { transition: opacity .3s; }
+
+  /* ── sections ── */
   section { padding: 76px 0; }
   .head { max-width: 660px; }
   .head h2 { margin-top: 14px; }
   .head p { margin-top: 16px; color: var(--ink-2); font-size: 1.06rem; }
   .head p.eyebrow { margin-top: 0; color: var(--gold-deep); font-size: 0.7rem; }
   .process .head p.eyebrow { color: var(--gold-hi); }
-  .stitch { height: 0; border-top: 1.5px dashed rgba(138, 100, 24, 0.4); margin: 0; }
+  /* headings rise in word by word */
+  .wd { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 .07em .14em; margin: 0 -.07em -.14em; }
+  .wi { display: inline-block; }
+  .js .split .wi { transform: translateY(108%); transition: transform 1.1s var(--ease) var(--d, 0ms); }
+  .js .split.in .wi { transform: none; }
 
-  /* occasions */
-  .occasions { padding: 60px 0 10px; }
-  .chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 22px; }
-  .chip { padding: 10px 16px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); font: 500 0.92rem var(--sans); color: var(--ink-2); }
-  .chip b { font: 600 1.05rem var(--serif); color: var(--ink); }
+  /* occasions: two ribbons that drift in opposite directions and speed up when you scroll */
+  .occasions { padding: 64px 0 18px; }
+  .marquee { position: relative; overflow: hidden; margin-top: 22px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+  .marquee + .marquee { margin-top: 6px; }
+  .track { display: flex; width: max-content; will-change: transform; }
+  .track span { flex: none; display: inline-flex; align-items: center; gap: 22px; padding-right: 22px; font: 600 clamp(2rem, 8vw, 3.4rem)/1.25 var(--serif); white-space: nowrap; color: var(--ink); }
+  .track span::after { content: '◆'; font-size: 0.32em; color: var(--gold); transform: translateY(-.1em); }
+  .marquee.alt .track span { font-style: italic; font-weight: 500; background: var(--gold-grad-deep); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .marquee.alt .track span::after { -webkit-text-fill-color: var(--gold); }
+  .static .track { flex-wrap: wrap; width: auto; }
 
   /* services */
-  .cards { display: grid; gap: 16px; margin-top: 38px; }
-  .card { position: relative; display: flex; flex-direction: column; background: var(--paper); border-radius: 22px; overflow: hidden; border: 1px solid var(--line); transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 28px 50px -34px rgba(70, 45, 10, 0.55); }
-  .card .swatch { position: relative; height: 128px; }
+  .cards { display: grid; gap: 18px; margin-top: 38px; }
+  .card { position: relative; display: flex; flex-direction: column; background: var(--paper); border-radius: 22px; overflow: hidden; border: 1px solid var(--line); transition: transform .9s var(--ease), opacity .9s var(--ease), box-shadow .35s var(--ease); }
+  .js .card.rv { opacity: 0; transform: perspective(900px) rotateX(14deg) translateY(36px); transform-origin: 50% 0; }
+  .js .card.rv.in { opacity: 1; transform: none; }
+  .card .swatch { position: relative; height: 136px; overflow: hidden; }
+  .card .f-satin { background-size: 100% 240%; }
+  .js .card .swatch { clip-path: inset(0 100% 0 0); transition: clip-path 1.3s var(--ease) .2s; }
+  .js .card.in .swatch { clip-path: inset(0 0 0 0); }
   .card .swatch::after { content: ''; position: absolute; inset: 0; background: linear-gradient(130deg, rgba(255, 255, 255, 0.16), transparent 40%, rgba(0, 0, 0, 0.18)); }
-  .card .swatch::before { content: ''; position: absolute; z-index: 1; left: 0; right: 0; bottom: -1px; height: 9px; background: radial-gradient(circle at 4.5px 9px, var(--paper) 4.5px, transparent 5px) 0 0 / 9px 9px repeat-x; }
-  .card .no { position: absolute; z-index: 1; top: 14px; left: 16px; font: 700 0.62rem var(--sans); letter-spacing: 0.22em; padding: 6px 10px; border-radius: 999px; background: rgba(255, 250, 241, 0.92); color: var(--ink-2); }
+  .card .swatch::before { content: ''; position: absolute; z-index: 2; left: 0; right: 0; bottom: -1px; height: 9px; background: radial-gradient(circle at 4.5px 9px, var(--paper) 4.5px, transparent 5px) 0 0 / 9px 9px repeat-x; }
+  .sheen { position: absolute; z-index: 1; inset: 0; background: linear-gradient(105deg, transparent 32%, rgba(255, 255, 255, 0.5) 50%, transparent 68%); transform: translateX(-130%); }
+  .card.in .sheen { animation: sweep 1.7s var(--ease) 1.05s forwards; }
+  @keyframes sweep { to { transform: translateX(130%); } }
+  .card .no { position: absolute; z-index: 3; top: 14px; left: 16px; font: 700 0.62rem var(--sans); letter-spacing: 0.22em; padding: 6px 10px; border-radius: 999px; background: rgba(255, 250, 241, 0.92); color: var(--ink-2); }
   .card .body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
   .card h3 { font-size: 1.75rem; }
   .card p { color: var(--ink-2); font-size: 0.96rem; }
@@ -167,30 +192,39 @@
   .card .ask svg { width: 16px; height: 16px; transition: transform .25s var(--ease); }
   .card:hover .ask svg { transform: translateX(4px); }
 
-  /* process */
-  .process { position: relative; background: var(--night); color: var(--cream); overflow: hidden; }
+  /* statement: pinned while its words fill with ink and gold */
+  .statement { position: relative; height: 230vh; padding: 0; }
+  .statement .pin { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; overflow: hidden; }
+  .statement .mark { position: absolute; left: 50%; top: 50%; font: 700 clamp(16rem, 70vw, 40rem)/1 var(--serif); letter-spacing: -0.12em; color: transparent; -webkit-text-stroke: 1px rgba(138, 100, 24, 0.16); transform: translate(-50%, -50%) rotate(var(--rot, 0deg)) scale(var(--sc, 1)); pointer-events: none; white-space: nowrap; }
+  .say { position: relative; font: 600 clamp(2.5rem, 10.5vw, 5.4rem)/1.04 var(--serif); letter-spacing: -0.015em; max-width: 14ch; }
+  .say .w { color: rgba(27, 20, 14, 0.13); transition: color .35s ease; }
+  .say .w.lit { color: var(--ink); }
+  .say em .w { color: transparent; background: var(--gold-grad-deep); -webkit-background-clip: text; background-clip: text; opacity: .2; transition: opacity .35s ease; }
+  .say em .w.lit { color: transparent; opacity: 1; }
+  .say-note { margin-top: 26px; font: 700 0.7rem var(--sans); letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-deep); }
+
+  /* process: on phones the steps are cards that stack as you scroll */
+  .process { position: relative; background: var(--night); color: var(--cream); }
   .process::before { content: ''; position: absolute; inset: 0; opacity: .06; background: var(--shweshwe); }
   .process .wrap { position: relative; }
-  .process .eyebrow { color: var(--gold-hi); }
   .process .head p { color: #cbbca4; }
-  .steps { position: relative; list-style: none; margin: 44px 0 0; padding: 0 0 0 34px; display: grid; gap: 30px; }
-  .steps::before { content: ''; position: absolute; left: 9px; top: 6px; bottom: 6px; border-left: 1.5px dashed rgba(236, 208, 137, 0.55); }
-  .steps li { position: relative; }
-  .steps li::before { content: ''; position: absolute; left: -31px; top: 8px; width: 14px; height: 14px; border-radius: 50%; background: var(--night); box-shadow: inset 0 0 0 2px var(--gold-hi), 0 0 0 5px var(--night); }
+  .steps { list-style: none; margin: 40px 0 0; padding: 0; }
+  .steps li { --dim: 0; position: sticky; top: calc(96px + var(--i) * 14px); margin-bottom: 18vh; padding: 62px 22px 26px; border-radius: 22px; overflow: hidden; transform-origin: 50% 0; will-change: transform;
+    background: linear-gradient(160deg, #2a1f15, #181009); box-shadow: 0 -18px 40px -24px rgba(0, 0, 0, 0.9), inset 0 0 0 1px rgba(236, 208, 137, 0.2); }
+  .steps li:last-child { margin-bottom: 0; }
+  .steps li::after { content: ''; position: absolute; inset: 0; background: #000; opacity: var(--dim); pointer-events: none; border-radius: inherit; }
+  .steps .strip { position: absolute; left: 0; right: 0; top: 0; height: 38px; }
+  .steps .strip::after { content: ''; position: absolute; left: 0; right: 0; bottom: -1px; height: 8px; background: radial-gradient(circle at 4px 8px, #241a11 4px, transparent 4.5px) 0 0 / 8px 8px repeat-x; }
+  .steps .num { position: absolute; right: 18px; top: 46px; font: 600 4.6rem/1 var(--serif); color: transparent; -webkit-text-stroke: 1px rgba(236, 208, 137, 0.45); }
   .steps .cm { font: 700 0.66rem var(--sans); letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold-hi); }
-  .steps h3 { margin-top: 6px; font-size: 1.85rem; color: #fbf3e4; }
-  .steps p { margin-top: 6px; color: #cbbca4; max-width: 38ch; }
+  .steps h3 { margin-top: 8px; font-size: 1.95rem; color: #fbf3e4; }
+  .steps p { margin-top: 8px; color: #cbbca4; max-width: 30ch; }
 
   /* visit */
   .visit { display: grid; gap: 16px; margin-top: 38px; }
   .map { position: relative; min-height: 300px; border-radius: 22px; overflow: hidden; border: 1px solid var(--line);
-    /* drawn street grid: shows until (or if) the live map loads */
     background-color: #efe6d8;
-    background-image:
-      linear-gradient(28deg, transparent 47%, rgba(255, 255, 255, 0.95) 47% 53%, transparent 53%),
-      linear-gradient(118deg, transparent 31%, rgba(255, 255, 255, 0.9) 31% 34%, transparent 34%, transparent 70%, rgba(255, 255, 255, 0.9) 70% 73%, transparent 73%),
-      repeating-linear-gradient(28deg, transparent 0 46px, rgba(160, 136, 104, 0.18) 46px 48px),
-      repeating-linear-gradient(118deg, transparent 0 58px, rgba(160, 136, 104, 0.18) 58px 60px); }
+    background-image: linear-gradient(28deg, transparent 47%, rgba(255, 255, 255, 0.95) 47% 53%, transparent 53%), linear-gradient(118deg, transparent 31%, rgba(255, 255, 255, 0.9) 31% 34%, transparent 34%, transparent 70%, rgba(255, 255, 255, 0.9) 70% 73%, transparent 73%), repeating-linear-gradient(28deg, transparent 0 46px, rgba(160, 136, 104, 0.18) 46px 48px), repeating-linear-gradient(118deg, transparent 0 58px, rgba(160, 136, 104, 0.18) 58px 60px); }
   .map-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: var(--ink); }
   .map-fallback .pin { width: 34px; height: 34px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--gold-grad); box-shadow: 0 10px 18px -8px rgba(70, 45, 10, 0.7); }
   .map-fallback .pin::after { content: ''; display: block; width: 12px; height: 12px; margin: 11px; border-radius: 50%; background: var(--paper); }
@@ -204,9 +238,10 @@
   .details .actions { display: grid; gap: 10px; margin-top: 24px; }
 
   /* closing */
-  .closing { position: relative; text-align: center; color: var(--cream); padding: 92px 0; overflow: hidden; background: radial-gradient(80% 120% at 50% 0%, #2b1f15, var(--night)); }
+  .closing { position: relative; text-align: center; color: var(--cream); padding: 110px 0 92px; overflow: hidden; background: radial-gradient(80% 120% at 50% 0%, #2b1f15, var(--night)); }
   .closing::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(112deg, transparent 0 90px, rgba(255, 240, 210, 0.03) 140px, transparent 190px); }
   .closing .wrap { position: relative; }
+  .closing .hangtag { position: relative; top: auto; right: auto; display: inline-block; margin: 0 auto 34px; }
   .closing .eyebrow { color: var(--gold-hi); }
   .closing h2 { max-width: 15ch; margin: 16px auto 0; color: #fbf3e4; }
   .closing p { max-width: 42ch; margin: 18px auto 0; color: #cbbca4; }
@@ -222,26 +257,20 @@
   footer .base { margin-top: 34px; padding-top: 20px; border-top: 1px solid rgba(236, 208, 137, 0.12); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 0.8rem; color: #8f7f68; }
 
   /* phone action bar */
-  .bar { position: fixed; z-index: 45; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 6px; padding: 6px; border-radius: 22px; background: rgba(23, 17, 12, 0.86); -webkit-backdrop-filter: blur(16px) saturate(150%); backdrop-filter: blur(16px) saturate(150%); box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(236, 208, 137, 0.18); transform: translateY(140%); transition: transform .5s var(--ease); }
+  .bar { position: fixed; z-index: 45; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 6px; padding: 6px; border-radius: 22px; background: rgba(23, 17, 12, 0.88); -webkit-backdrop-filter: blur(16px) saturate(150%); backdrop-filter: blur(16px) saturate(150%); box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.7), inset 0 0 0 1px rgba(236, 208, 137, 0.18); transform: translateY(140%); transition: transform .5s var(--ease); }
   .bar.show { transform: none; }
-  .bar a { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 50px; border-radius: 16px; font: 600 0.88rem var(--sans); text-decoration: none; color: var(--cream); }
+  .bar a { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 50px; border-radius: 16px; font: 600 0.88rem var(--sans); text-decoration: none; color: var(--cream); }
   .bar a:first-child { background: var(--gold-grad); color: #241806; }
   .bar svg { width: 18px; height: 18px; }
 
   /* reveal */
   .js .rv { opacity: 0; transform: translateY(22px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
   .js .rv.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) {
-    .js .rv { opacity: 1; transform: none; transition: none; }
-    .hangtag { animation: none; }
-    .js .book:not(.open) .sw { transform: none; }
-    html { scroll-behavior: auto; }
-  }
 
   @media (max-width: 420px) { header.top .brand span { display: none; } }
   @media (max-width: 639px) {
     .sw .tag { padding: 8px 7px; } .sw .tag b { font-size: 0.82rem; } .sw .tag small { font-size: 0.5rem; letter-spacing: 0.14em; }
-    .hangtag { display: none; } /* the GT is in the header on phones; keeps the fan clear */
+    .hero .hangtag { display: none; }
   }
   @media (min-width: 640px) {
     .ctas { display: flex; flex-wrap: wrap; }
@@ -255,25 +284,38 @@
     .hero { padding-top: calc(72px + 70px); }
     .hero .wrap { grid-template-columns: 1.15fr 1fr; align-items: center; gap: 40px; }
     .book { --w: 190px; --h: 300px; --b: 40px; height: 480px; width: 100%; margin: 0; }
-    .hangtag { top: 34px; right: 10%; }
+    .hero .hangtag { top: 34px; right: 10%; }
     .tape-band { margin-top: 10px; }
     section { padding: 110px 0; }
-    .occasions { padding: 80px 0 0; }
+    .occasions { padding: 90px 0 20px; }
     .cards { grid-template-columns: repeat(3, 1fr); }
-    .steps { grid-template-columns: repeat(4, 1fr); padding: 34px 0 0; gap: 28px; }
-    .steps::before { left: 6px; right: 6px; top: 8px; bottom: auto; border-left: 0; border-top: 1.5px dashed rgba(236, 208, 137, 0.55); }
-    .steps li { padding-top: 4px; }
-    .steps li::before { left: 0; top: -33px; }
+    /* desktop: the steps sit on one stitched line instead of stacking */
+    .steps { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; padding-top: 34px; }
+    .steps::before { content: ''; position: absolute; left: 6px; right: 6px; top: 8px; border-top: 1.5px dashed rgba(236, 208, 137, 0.55); }
+    .steps li { position: relative; top: auto; margin: 0; padding: 4px 0 0; background: none; box-shadow: none; overflow: visible; transform: none !important; }
+    .steps li::after { display: none; }
+    .steps li::before { content: ''; position: absolute; left: 0; top: -33px; width: 14px; height: 14px; border-radius: 50%; background: var(--night); box-shadow: inset 0 0 0 2px var(--gold-hi), 0 0 0 5px var(--night); }
+    .steps .strip, .steps .num { display: none; }
     .visit { grid-template-columns: 1.35fr 1fr; }
     .map { min-height: 420px; }
     .bar { display: none; }
     footer { padding-bottom: 44px; }
   }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js .rv, .js .card.rv { opacity: 1; transform: none; transition: none; }
+    .js .li, .js .split .wi { transform: none; transition: none; }
+    .js .card .swatch { clip-path: none; transition: none; }
+    .li.gold, .btn-gold::after { animation: none; }
+    .card.in .sheen { animation: none; }
+    .statement { height: auto; } .statement .pin { position: static; height: auto; padding: 90px 0; }
+    .steps li { position: relative; top: auto; margin-bottom: 16px; }
+  }
 </style>
 </head>
 <body>
 
-<header class="top" id="top">
+<header class="top">
   <div class="wrap">
     <a class="brand" href="#main" aria-label="Grace Taiken, back to top">
       <img src="storefront.png" width="40" height="40" alt="">
@@ -287,11 +329,22 @@
 </header>
 
 <main id="main">
+  <svg class="thread" aria-hidden="true">
+    <defs>
+      <linearGradient id="threadGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6418"/><stop offset=".5" stop-color="#e9c86f"/><stop offset="1" stop-color="#a87a22"/></linearGradient>
+      <linearGradient id="needleGold" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8f6a22"/><stop offset=".45" stop-color="#fff2c4"/><stop offset="1" stop-color="#b58a35"/></linearGradient>
+    </defs>
+    <path class="chalk"/>
+    <path class="silk"/>
+    <g class="needle"><path d="M-5 0 Q-4 -2 0 -2 L24 0 L0 2 Q-4 2 -5 0Z" fill="url(#needleGold)" stroke="rgba(80,55,15,.5)" stroke-width=".4"/><ellipse cx="-1.4" cy="0" rx="2" ry=".75" fill="#3b2a12"/></g>
+  </svg>
+
   <section class="hero" style="padding-bottom:0">
+    <canvas class="dust" aria-hidden="true"></canvas>
     <div class="wrap">
-      <div>
+      <div class="hero-copy">
         <p class="eyebrow rv">Fashion designer &amp; dressmaker · Pretoria West</p>
-        <h1 class="rv">Where elegance <em class="gold">becomes identity.</em></h1>
+        <h1><span class="ln"><span class="li">Where elegance</span></span><span class="ln"><em class="li gold">becomes identity.</em></span></h1>
         <p class="lede rv">Made-to-measure clothing for men, women and children. Wedding, traditional and heritage, formal and dinner wear, designed with you and sewn to your measurements in our Pretoria West studio.</p>
         <div class="ctas rv">
           <a class="btn btn-gold wa" data-msg="Hi Grace Taiken, I saw your website and I'd like to book a fitting." href="https://wa.me/27619879968">
@@ -320,52 +373,47 @@
     <div class="tape-band" aria-hidden="true"><div class="tape"><div class="tape-track"></div></div></div>
   </section>
 
-  <section class="occasions">
-    <div class="wrap">
-      <p class="eyebrow rv">Dressed for every occasion</p>
-      <div class="chips rv">
-        <span class="chip"><b>Weddings</b></span><span class="chip"><b>Traditional ceremonies</b></span><span class="chip"><b>Heritage Day</b></span>
-        <span class="chip"><b>Matric farewells</b></span><span class="chip"><b>Church &amp; Sunday best</b></span><span class="chip"><b>Graduations</b></span>
-        <span class="chip"><b>Dinners &amp; galas</b></span><span class="chip"><b>Family celebrations</b></span>
-      </div>
-    </div>
+  <section class="occasions" aria-label="Occasions we dress for">
+    <div class="wrap"><p class="eyebrow rv">Dressed for every occasion</p></div>
+    <div class="marquee" data-dir="-1"><div class="track"><span>Weddings</span><span>Traditional ceremonies</span><span>Heritage Day</span><span>Matric farewells</span></div></div>
+    <div class="marquee alt" data-dir="1"><div class="track"><span>Church &amp; Sunday best</span><span>Graduations</span><span>Dinners &amp; galas</span><span>Family celebrations</span></div></div>
   </section>
 
   <section id="make">
     <div class="wrap">
-      <div class="head rv">
-        <p class="eyebrow">What we make</p>
-        <h2>Every outfit, <em class="gold">made to measure.</em></h2>
-        <p>Bring the occasion, a fabric you love or a picture you saved. We design it with you and sew it to fit you, not a size on a rail.</p>
+      <div class="head">
+        <p class="eyebrow rv">What we make</p>
+        <h2 class="split">Every outfit, <em class="gold">made to measure.</em></h2>
+        <p class="rv">Bring the occasion, a fabric you love or a picture you saved. We design it with you and sew it to fit you, not a size on a rail.</p>
       </div>
       <div class="cards">
         <article class="card rv">
-          <div class="swatch f-lace"><span class="no">01</span></div>
+          <div class="swatch f-lace"><span class="sheen"></span><span class="no">01</span></div>
           <div class="body"><h3>Wedding wear</h3><p>Gowns, suits and outfits for the couple, the bridal party and the family, including traditional ceremony looks.</p>
           <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about wedding wear." href="https://wa.me/27619879968">Ask about wedding wear <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         </article>
         <article class="card rv">
-          <div class="swatch f-shweshwe"><span class="no">02</span></div>
+          <div class="swatch f-shweshwe"><span class="sheen"></span><span class="no">02</span></div>
           <div class="body"><h3>Traditional &amp; heritage</h3><p>Cultural and Heritage Day outfits that honour where you come from, cut to look sharp today.</p>
           <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about traditional and heritage wear." href="https://wa.me/27619879968">Ask about heritage wear <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         </article>
         <article class="card rv">
-          <div class="swatch f-satin"><span class="no">03</span></div>
+          <div class="swatch f-satin"><span class="sheen"></span><span class="no">03</span></div>
           <div class="body"><h3>Formal &amp; dinner wear</h3><p>Evening dresses, farewell looks and dinner suits for the nights you want to remember.</p>
           <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about formal or dinner wear." href="https://wa.me/27619879968">Ask about evening wear <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         </article>
         <article class="card rv">
-          <div class="swatch f-pin"><span class="no">04</span></div>
+          <div class="swatch f-pin"><span class="sheen"></span><span class="no">04</span></div>
           <div class="body"><h3>Men's tailoring</h3><p>Suits, shirts and traditional menswear made to your measurements.</p>
           <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about men's tailoring." href="https://wa.me/27619879968">Ask about tailoring <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         </article>
         <article class="card rv">
-          <div class="swatch f-gingham"><span class="no">05</span></div>
+          <div class="swatch f-gingham"><span class="sheen"></span><span class="no">05</span></div>
           <div class="body"><h3>Children's wear</h3><p>Outfits for weddings, church, school functions and family celebrations, so the whole family matches.</p>
           <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about children's wear." href="https://wa.me/27619879968">Ask about children's wear <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         </article>
         <article class="card rv">
-          <div class="swatch f-wax"><span class="no">06</span></div>
+          <div class="swatch f-wax"><span class="sheen"></span><span class="no">06</span></div>
           <div class="body"><h3>Doeks &amp; headwraps</h3><p>Doeks to finish your outfit or to wear every day, in the colours and fabrics you choose.</p>
           <a class="ask wa" data-msg="Hi Grace Taiken, I'd like to ask about doeks." href="https://wa.me/27619879968">Ask about doeks <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         </article>
@@ -373,27 +421,37 @@
     </div>
   </section>
 
+  <section class="statement" aria-label="Bring your idea. Leave with your identity.">
+    <div class="pin">
+      <span class="mark" aria-hidden="true">GT</span>
+      <div class="wrap">
+        <p class="say" aria-hidden="true">Bring your idea. Leave with <em>your identity.</em></p>
+        <p class="say-note">Grace Taiken · Pretoria West</p>
+      </div>
+    </div>
+  </section>
+
   <section id="how" class="process">
     <div class="wrap">
-      <div class="head rv">
-        <p class="eyebrow">How it works</p>
-        <h2>From your idea <em class="gold">to your fitting.</em></h2>
-        <p>You see it come together before the big day, with time to get every detail right.</p>
+      <div class="head">
+        <p class="eyebrow rv">How it works</p>
+        <h2 class="split">From your idea <em class="gold">to your fitting.</em></h2>
+        <p class="rv">You see it come together before the big day, with time to get every detail right.</p>
       </div>
       <ol class="steps">
-        <li class="rv"><span class="cm">Step 01</span><h3>Share your idea</h3><p>Send us a picture, a sketch or just the occasion and the date on WhatsApp.</p></li>
-        <li class="rv"><span class="cm">Step 02</span><h3>Get measured</h3><p>Visit the studio at 341 Nkomo Street and we take your measurements.</p></li>
-        <li class="rv"><span class="cm">Step 03</span><h3>Your fitting</h3><p>Try it on, and we adjust it until it fits the way it should.</p></li>
-        <li class="rv"><span class="cm">Step 04</span><h3>Wear it proudly</h3><p>Collect your outfit, ready for your day.</p></li>
+        <li style="--i:0"><span class="strip f-lace"></span><span class="num" aria-hidden="true">01</span><span class="cm">Step 01</span><h3>Share your idea</h3><p>Send us a picture, a sketch or just the occasion and the date on WhatsApp.</p></li>
+        <li style="--i:1"><span class="strip f-shweshwe"></span><span class="num" aria-hidden="true">02</span><span class="cm">Step 02</span><h3>Get measured</h3><p>Visit the studio at 341 Nkomo Street and we take your measurements.</p></li>
+        <li style="--i:2"><span class="strip f-satin"></span><span class="num" aria-hidden="true">03</span><span class="cm">Step 03</span><h3>Your fitting</h3><p>Try it on, and we adjust it until it fits the way it should.</p></li>
+        <li style="--i:3"><span class="strip f-wax"></span><span class="num" aria-hidden="true">04</span><span class="cm">Step 04</span><h3>Wear it proudly</h3><p>Collect your outfit, ready for your day.</p></li>
       </ol>
     </div>
   </section>
 
   <section id="visit">
     <div class="wrap">
-      <div class="head rv">
-        <p class="eyebrow">Visit the studio</p>
-        <h2>Come in for <em class="gold">a fitting.</em></h2>
+      <div class="head">
+        <p class="eyebrow rv">Visit the studio</p>
+        <h2 class="split">Come in for <em class="gold">a fitting.</em></h2>
       </div>
       <div class="visit">
         <div class="map rv">
@@ -417,8 +475,9 @@
 
   <section class="closing">
     <div class="wrap">
+      <div class="hangtag swing" aria-hidden="true"><b>GT</b><small>Made to<br>measure</small></div>
       <p class="eyebrow rv">Have an occasion coming up?</p>
-      <h2 class="rv">Let's make something <em class="gold">that's yours.</em></h2>
+      <h2 class="split">Let's make something <em class="gold">that's yours.</em></h2>
       <p class="rv">Wedding season and farewells fill up fast. Send us your date and we'll take it from there.</p>
       <a class="btn btn-gold rv wa" data-msg="Hi Grace Taiken, I have an occasion coming up and I'd like an outfit made." href="https://wa.me/27619879968">Start on WhatsApp</a>
     </div>
@@ -446,35 +505,198 @@
 </nav>
 
 <script>
-(function () {
-  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
-  // WhatsApp links carry a ready-made message.
-  document.querySelectorAll('a.wa[data-msg]').forEach(function (a) { a.href = 'https://wa.me/27619879968?text=' + encodeURIComponent(a.dataset.msg) })
-  document.getElementById('yr').textContent = new Date().getFullYear()
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+  const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)]
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v))
 
-  // Tape measure: numbers every 10 cm, red every 50.
-  var track = document.querySelector('.tape-track'), html = ''
-  for (var i = 0; i <= 59; i++) html += '<span class="' + (i % 5 === 0 ? 'red' : '') + '" style="left:' + (i * 100) + 'px">' + (i * 10) + '</span>'
-  track.innerHTML = html
+  /* WhatsApp links carry a ready-made message */
+  $$('a.wa[data-msg]').forEach((a) => { a.href = 'https://wa.me/27619879968?text=' + encodeURIComponent(a.dataset.msg) })
+  $('#yr').textContent = new Date().getFullYear()
 
-  // Header turns solid after the hero; the phone action bar appears once you scroll.
-  var header = document.querySelector('header.top'), bar = document.querySelector('.bar')
-  function onScroll() {
-    var y = scrollY
+  /* tape measure numbers: every 10 cm, red every 50 */
+  const track = $('.tape-track')
+  track.innerHTML = Array.from({ length: 60 }, (_, i) => `<span class="${i % 5 === 0 ? 'red' : ''}" style="left:${i * 100}px">${i * 10}</span>`).join('')
+
+  /* headings: split into words that rise in turn (gold words keep their gold) */
+  $$('.split').forEach((h) => {
+    let i = 0
+    const words = (text, gold) => text.split(/(\s+)/).map((t) => /^\s+$/.test(t) || !t ? t : `<span class="wd"><span class="wi${gold ? ' gold' : ''}" style="--d:${i++ * 70}ms">${t}</span></span>`).join('')
+    h.innerHTML = [...h.childNodes].map((n) => n.nodeType === 3 ? words(n.textContent, false) : `<em>${words(n.textContent, true)}</em>`).join('')
+  })
+
+  /* statement: one span per word */
+  const say = $('.say')
+  say.innerHTML = [...say.childNodes].map((n) => {
+    const w = (t) => t.split(/(\s+)/).map((x) => /^\s+$/.test(x) || !x ? x : `<span class="w">${x}</span>`).join('')
+    return n.nodeType === 3 ? w(n.textContent) : `<em>${w(n.textContent)}</em>`
+  }).join('')
+  const sayWords = $$('.say .w')
+
+  /* occasion ribbons: repeat the items until each row is wide enough to loop */
+  const rows = $$('.marquee').map((m) => {
+    const t = $('.track', m), unit = t.innerHTML
+    t.innerHTML = unit + unit + unit + unit
+    return { m, t, dir: +m.dataset.dir, x: 0, w: 0 }
+  })
+  const measure = () => rows.forEach((r) => { r.w = r.t.scrollWidth / 4 })
+
+  const header = $('header.top'), bar = $('.bar'), hero = $('.hero'), book = $('.book'), copy = $('.hero-copy')
+  const statement = $('.statement'), mark = $('.statement .mark'), occasions = $('.occasions'), process = $('.process'), closing = $('.closing')
+  const steps = $$('.steps li'), swatches = $$('.card .swatch'), tag = $('.closing .swing')
+
+  /* simple states first (they matter even with reduced motion) */
+  const onScrollBasics = () => {
+    const y = scrollY
     header.classList.toggle('solid', y > 40)
     bar.classList.toggle('show', y > 420)
-    if (!reduce) track.style.transform = 'translateX(' + (-y * 0.35) + 'px)'
   }
-  addEventListener('scroll', onScroll, { passive: true }); onScroll()
+  addEventListener('scroll', onScrollBasics, { passive: true }); onScrollBasics()
 
-  // The swatch book fans open, and sections rise in as they arrive.
-  var book = document.querySelector('.book')
   if (reduce || !('IntersectionObserver' in window)) {
-    book.classList.add('open'); document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in') }); return
+    hero.classList.add('ready'); book.classList.add('open')
+    $$('.rv, .split').forEach((el) => el.classList.add('in'))
+    sayWords.forEach((w) => w.classList.add('lit'))
+    $$('.marquee').forEach((m) => m.classList.add('static'))
+    $('.thread').style.display = 'none'
+    return
   }
-  setTimeout(function () { book.classList.add('open') }, 350)
-  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }) }, { rootMargin: '0px 0px -8% 0px' })
-  document.querySelectorAll('.rv').forEach(function (el) { io.observe(el) })
+
+  /* entrance */
+  requestAnimationFrame(() => setTimeout(() => hero.classList.add('ready'), 80))
+  setTimeout(() => book.classList.add('open'), 450)
+  setTimeout(() => book.classList.add('scrub'), 1500)
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target) } }), { rootMargin: '0px 0px -10% 0px' })
+  $$('.rv, .split').forEach((el) => io.observe(el))
+
+  /* which areas are on screen (so each frame only does what is visible) */
+  const vis = new Map()
+  const vio = new IntersectionObserver((es) => es.forEach((e) => vis.set(e.target, e.isIntersecting)), { rootMargin: '120px 0px' })
+  ;[hero, occasions, statement, process, closing, ...swatches].forEach((el) => vio.observe(el))
+  const seen = (el) => vis.get(el)
+
+  /* the thread: a path down the gutters that crosses at each section, sewn as you scroll */
+  const main = $('main'), svg = $('.thread'), chalk = $('.thread .chalk'), silk = $('.thread .silk'), needle = $('.needle')
+  let len = 0, lut = [], mainTop = 0
+  const buildThread = () => {
+    const W = main.clientWidth, H = main.scrollHeight
+    mainTop = main.getBoundingClientRect().top + scrollY
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.style.height = H + 'px'
+    const g = W < 700 ? 8 : Math.max(16, (W - 1180) / 2 + 16), L = g, R = W - g
+    const ys = $$('main > section').slice(1).map((s) => s.getBoundingClientRect().top + scrollY - mainTop)
+    let side = L, d = `M ${L} ${ys[0] + 30}`
+    for (let i = 1; i < ys.length; i++) {
+      const yb = ys[i], o = side === L ? R : L
+      d += ` L ${side} ${yb - 52} C ${side} ${yb + 6}, ${o} ${yb - 6}, ${o} ${yb + 52}`
+      side = o
+    }
+    d += ` L ${side} ${H - 40}`
+    chalk.setAttribute('d', d); silk.setAttribute('d', d)
+    len = silk.getTotalLength()
+    silk.style.strokeDasharray = `${len} ${len}`
+    lut = []; const N = 700
+    for (let k = 0; k <= N; k++) lut.push(silk.getPointAtLength((len * k) / N).y)
+  }
+  const lenAtY = (yy) => {
+    if (yy <= lut[0]) return 0
+    let lo = 0, hi = lut.length - 1
+    if (yy >= lut[hi]) return len
+    while (hi - lo > 1) { const mid = (lo + hi) >> 1; if (lut[mid] < yy) lo = mid; else hi = mid }
+    const f = (yy - lut[lo]) / ((lut[hi] - lut[lo]) || 1)
+    return ((lo + f) / (lut.length - 1)) * len
+  }
+
+  /* gold dust in the hero */
+  const cv = $('.dust'), cx = cv.getContext('2d')
+  let motes = []
+  const sizeDust = () => {
+    const dpr = Math.min(2, devicePixelRatio || 1), r = hero.getBoundingClientRect()
+    cv.width = r.width * dpr; cv.height = r.height * dpr; cx.setTransform(dpr, 0, 0, dpr, 0, 0)
+    const n = r.width < 700 ? 26 : 44
+    motes = Array.from({ length: n }, () => ({ x: Math.random() * r.width, y: Math.random() * r.height, r: Math.random() * 1.6 + 0.4, vy: -(Math.random() * 0.25 + 0.06), vx: (Math.random() - 0.5) * 0.12, t: Math.random() * 6.28, s: Math.random() * 0.02 + 0.008 }))
+  }
+  const drawDust = (w, h) => {
+    cx.clearRect(0, 0, w, h)
+    for (const m of motes) {
+      m.y += m.vy; m.x += m.vx; m.t += m.s
+      if (m.y < -4) { m.y = h + 4; m.x = Math.random() * w }
+      const a = 0.25 + 0.55 * (0.5 + 0.5 * Math.sin(m.t))
+      cx.globalAlpha = a; cx.fillStyle = '#f2d78c'
+      cx.beginPath(); cx.arc(m.x, m.y, m.r, 0, 6.283); cx.fill()
+      if (m.r > 1.5) { cx.globalAlpha = a * 0.35; cx.fillRect(m.x - m.r * 3, m.y - 0.3, m.r * 6, 0.6); cx.fillRect(m.x - 0.3, m.y - m.r * 3, 0.6, m.r * 6) }
+    }
+    cx.globalAlpha = 1
+  }
+
+  /* one loop drives everything */
+  let vh = innerHeight, lastY = scrollY, vel = 0, swing = 0, swingV = 0, lastT = performance.now(), lit = -1
+  const layout = () => { vh = innerHeight; measure(); buildThread(); sizeDust() }
+  layout()
+  new ResizeObserver(() => layout()).observe(main)
+  document.fonts && document.fonts.ready.then(layout)
+
+  const frame = (t) => {
+    const dt = Math.min(48, t - lastT) / 16.7; lastT = t
+    const y = scrollY
+    vel += ((y - lastY) - vel) * 0.25; lastY = y
+
+    if (seen(hero)) {
+      const h = hero.offsetHeight, p = clamp(y / (h * 0.85), 0, 1)
+      book.style.setProperty('--spread', p.toFixed(3))
+      copy.style.transform = `translate3d(0, ${(y * (innerWidth < 1000 ? 0.04 : 0.16)).toFixed(1)}px, 0)`
+      copy.style.opacity = (1 - p * (innerWidth < 1000 ? 0.9 : 0.75)).toFixed(3)
+      drawDust(hero.clientWidth, h)
+    }
+    track.style.transform = `translate3d(${(-y * 0.35).toFixed(1)}px, 0, 0)`
+
+    if (seen(occasions)) rows.forEach((r) => {
+      r.x += (0.45 + Math.min(9, Math.abs(vel)) * 0.55) * dt
+      if (r.x > r.w) r.x -= r.w
+      const x = r.dir < 0 ? -r.x : r.x - r.w
+      r.t.style.transform = `translate3d(${x.toFixed(1)}px, 0, 0)`
+    })
+
+    for (const s of swatches) if (seen(s)) {
+      const r = s.getBoundingClientRect()
+      s.style.backgroundPosition = `0 ${((r.top - vh / 2) * 0.14).toFixed(1)}px`
+    }
+
+    if (seen(statement)) {
+      const r = statement.getBoundingClientRect()
+      const p = clamp(-r.top / (statement.offsetHeight - vh), 0, 1)
+      const n = Math.round(clamp(p * 1.12, 0, 1) * sayWords.length)
+      if (n !== lit) { sayWords.forEach((w, i) => w.classList.toggle('lit', i < n)); lit = n }
+      mark.style.setProperty('--rot', `${(-8 + p * 16).toFixed(2)}deg`)
+      mark.style.setProperty('--sc', (0.9 + p * 0.2).toFixed(3))
+    }
+
+    if (seen(process) && innerWidth < 1000) steps.forEach((li, i) => {
+      const next = steps[i + 1]
+      if (!next) return
+      const r = li.getBoundingClientRect(), rn = next.getBoundingClientRect()
+      const o = clamp((r.bottom - rn.top) / r.height, 0, 1)
+      li.style.transform = `scale(${(1 - o * 0.06).toFixed(4)})`
+      li.style.setProperty('--dim', (o * 0.45).toFixed(3))
+    })
+
+    if (len) {
+      const l = lenAtY(y + vh * 0.64 - mainTop)
+      silk.style.strokeDashoffset = (len - l).toFixed(1)
+      const a = silk.getPointAtLength(Math.max(0, l - 4)), b = silk.getPointAtLength(l)
+      const ang = Math.atan2(b.y - a.y, b.x - a.x) * 57.2958
+      needle.setAttribute("transform", `translate(${b.x.toFixed(1)} ${b.y.toFixed(1)}) rotate(${ang.toFixed(1)}) scale(1.6)`)
+      needle.style.opacity = l > 2 && l < len - 2 ? 1 : 0
+    }
+
+    if (seen(closing)) {
+      swingV += (-swing * 0.03 - swingV * 0.07 + vel * 0.05) * dt
+      swing += swingV * dt
+      tag.style.setProperty('--swing', `${clamp(swing + 4 * Math.sin(t / 900), -28, 28).toFixed(2)}deg`)
+    }
+
+    requestAnimationFrame(frame)
+  }
+  requestAnimationFrame(frame)
 })()
 </script>
 </body>

@@ -11,7 +11,17 @@ The website for **Grace Taiken Fashion & Beauty Salon** (WhatsApp name "taikenfa
 - **Hero:** a fabric swatch book that fans open on a gold rivet (lace, shweshwe, satin, wax print, pinstripe), with a "GT made to measure" hang tag.
 - **Fabrics:** each service card is topped with its fabric. All the fabrics are drawn in code (SVG/CSS patterns), with no stock photos.
 - **Tape measure:** it runs across the page and slides as you scroll.
-- **Process:** "How it works" runs along a stitched line.
+- **Process:** "How it works" runs along a stitched line on desktop; on phones the steps are cards that stack as you scroll.
+
+**Scroll effects:** one `requestAnimationFrame` loop drives them all. It works only on what is on screen and moves things with transform and opacity only. Everything is off under reduced motion.
+
+- **Needle and thread:** a gold needle sews a thread down the page as you scroll. The thread follows a faint chalk line and crosses the page between sections.
+- **Hero:** the headline rises in line by line with a gold shimmer, gold dust drifts behind it, and the swatch book fans wider as you scroll.
+- **Occasions:** two ribbons drift in opposite directions and speed up with your scroll.
+- **Fabric cards:** each fabric unrolls (clip reveal) with a light sweep, and the patterns drift with the scroll, so the satin shimmers.
+- **Statement:** a pinned line ("Bring your idea. Leave with your identity.") fills word by word in ink and gold, with a large GT watermark turning behind it.
+- **Closing:** the GT tag swings with your scroll speed.
+- **Headings:** they rise in word by word, and the gold buttons carry a passing shine.
 - **Visit the studio:** a live Google map, with a drawn fallback.
 - **Phone action bar:** WhatsApp, Call and Directions, shown after the first scroll.
 - **Buttons:** every one opens WhatsApp (+27 61 987 9968) with a message written for that service.
